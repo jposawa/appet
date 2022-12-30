@@ -1,0 +1,66 @@
+/*RESETS*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-style: none;
+  list-style: none;
+}
+/*RESETS*/
+
+/*THEMES*/
+.themes {
+  --color1: hsl(var(--hue1), 100%, var(--light1));
+  --color1Light: hsl(var(--hue1), 100%, calc(var(--light1) + 5%));
+  --color1Lightest: hsl(var(--hue1), 100%, calc(var(--light1) + 10%));
+  --color1Dark: hsl(var(--hue1), 100%, calc(var(--light1) - 5%));
+  --color1Darkest: hsl(var(--hue1), 100%, calc(var(--light1) - 10%));
+
+  --color2: hsl(var(--hue2), 100%, var(--light2));
+  --color2Light: hsl(var(--hue2), 100%, calc(var(--light2) + 5%));
+  --color2Lightest: hsl(var(--hue2), 100%, calc(var(--light2) + 10%));
+  --color2Dark: hsl(var(--hue2), 100%, calc(var(--light2) - 5%));
+  --color2Darkest: hsl(var(--hue2), 100%, calc(var(--light2) - 10%));
+}
+
+.mainTheme {
+  --hue1: 210;
+  --light1: 23%;
+  
+  --hue2: calc(var(--hue1) - 42);
+  --light2: 20%;
+}
+/*THEMES*/
+
+main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &>div {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,1);
+  }
+
+  &>nav {
+    width: 100%;
+    height: min(10%, 4rem);
+    background: var(--color1);
+  }
+
+  @media (min-width: 1200px) {
+    flex-direction: row-reverse;
+
+    &>nav {
+      width: min(10%, 4rem);
+      height: 100%;
+    }
+  }
+}
