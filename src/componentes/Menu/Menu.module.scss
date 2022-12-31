@@ -1,0 +1,56 @@
+.menu {
+  --tamanhoBordaAtual: 5 nm,px;
+  --borderAtual: var(--tamanhoBordaAtual) solid var(--color2Dark);
+  
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+
+  .localAtual {
+    background: var(--color1Dark);
+  }
+
+  &>* {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    transition: box-shadow 0.3s, color 0.3s, border 0.3s;
+    transition-timing-function: linear;
+    
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 20rem rgba(0,0,0,0.5) inset;
+    }
+
+    &>span {
+      font-size: 1.5em;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .localAtual {
+      border-left: var(--borderAtual);
+      border-bottom: none;
+    }
+    
+    &>* {
+      width: 100%;
+      height: auto;
+      padding: 0.5rem 0;
+      gap: 0.3rem;
+    }
+
+    &>div {
+      position: absolute;
+      right: auto;
+      bottom: 0;
+    }
+  }
+}
