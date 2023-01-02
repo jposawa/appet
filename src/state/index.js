@@ -1,12 +1,12 @@
 import { atom } from "recoil";
-import { CONFIG } from "../utils";
+import { APP_PREFIX } from "../utils";
 
 export const fbAppState = atom({
-  key: `${CONFIG.PREFIX}#fbApp`,
+  key: `${APP_PREFIX}fbApp`,
   default: null,
 });
 
 export const themeState = atom({
-  key: `${CONFIG.PREFIX}#theme`,
+  key: `${APP_PREFIX}theme`,
   default: "mainTheme",
 });

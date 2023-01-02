@@ -1,5 +1,6 @@
+export const APP_PREFIX = "appet#";
+
 export const CONFIG = {
-  PREFIX: "appet@",
   BASE_FB: "appet",
   FB_CONFIG: {
     apiKey: "AIzaSyDtP73MjGbNPnMvyF8HQzhP_6ytRUQb2AQ",
@@ -12,7 +13,7 @@ export const CONFIG = {
   },
 };
 
-export * from "./fbUtils.js";
+// export * from "./fbUtils.js";
 
 export const getLocalStorage = (keyName, isObject) => {
   const result = localStorage.getItem(keyName);

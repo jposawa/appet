@@ -4,6 +4,7 @@ import { fbAppState, themeState } from "./state";
 import { initializeApp } from "firebase/app";
 import { CONFIG } from "./utils";
 import { Menu } from "./componentes";
+import { Rotas } from "./paginas";
 
 import './App.scss'
 
@@ -19,7 +20,9 @@ export default function App() {
 
   return (
     <main className={`themes ${theme}`}>
-      <div></div>
+      <div>
+        <Rotas />
+      </div>
       <Menu />
     </main>
   )
