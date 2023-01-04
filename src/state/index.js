@@ -10,3 +10,8 @@ export const themeState = atom({
   key: `${APP_PREFIX}theme`,
   default: "mainTheme",
 });
+
+export const usuarioState = atom({
+  key: `${APP_PREFIX}usuario`,
+  default: null,
+});

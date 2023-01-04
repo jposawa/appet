@@ -1,0 +1,22 @@
+.input {
+  --padding: 0.2rem;
+  --background: var(--backgroundColor, inherit);
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  padding: var(--padding);
+
+  &>label {
+    transition: all 0.2s linear;
+    background: none;
+    cursor: text;
+  }
+
+  &>input {
+    border-style: solid;
+    background: var(--background);
+    padding: var(--padding);
+    transition: all 0.3s linear;
+  }
+}

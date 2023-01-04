@@ -15,14 +15,26 @@ export const CONFIG = {
 
 // export * from "./fbUtils.js";
 
-export const getLocalStorage = (keyName, isObject) => {
-  const result = localStorage.getItem(keyName);
+export const pegaLocalStorage = (nomeChave, isObject) => {
+  const resultado = localStorage.getItem(nomeChave);
   
-  return isObject ? JSON.parse(result) : result;  
+  return isObject ? JSON.parse(resultado) : resultado;  
 };
 
-export const setLocalStorage = (keyName, value, isObject) => {
-  const savedValue = isObject ? JSON.stringify(value) : value;
+export const salvaLocalStorage = (nomeChave, valor, isObject) => {
+  const valorSalvo = isObject ? JSON.stringify(valor) : valor;
 
-  localStorage.setItem(keyName, savedValue);
+  localStorage.setItem(nomeChave, valorSalvo);
 };
+
+export const pegaSessionStorage = (nomeChave, isObject) => {
+  const resultado = sessionStorage.getItem(nomeChave);
+
+  return isObject ? JSON.parse(resultado) : resultado;
+}
+
+export const salvaSessionStorage = (nomeChave, valor, isObject) => {
+  const valorSalvo = isObject ? JSON.stringify(valor) : valor;
+
+  sessionStorage.setItem(nomeChave, valorSalvo);
+}
